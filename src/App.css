@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.crypto{
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+
+}
+img{
+  width: 35vw;
+}
