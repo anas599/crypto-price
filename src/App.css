@@ -32,19 +32,32 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.crypto{
 
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(9, 1fr);
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-
+.crypto-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
 }
-img{
-  width: 35vw;
+
+.single-crypto {
+  display: flex;
+  border: 2px solid red;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  padding: 10px;
+}
+
+img {
+  width: 30vw;
 }

@@ -1,13 +1,17 @@
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
-import ApiCrypto from './components/ApiCrypto';
+// import ApiCrypto from './components/ApiCrypto';
+import CryptoPage from './pages/cryptoPage';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <ApiCrypto />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+      </div>
+      <CryptoPage />
+    </BrowserRouter>
   );
 }
 
