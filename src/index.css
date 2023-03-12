@@ -25,3 +25,7 @@ code {
     'Courier New',
     monospace;
 }
+nav > ul{
+  display: flex;
+  flex-direction: row;
+}
