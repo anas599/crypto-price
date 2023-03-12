@@ -24,6 +24,7 @@ const CryptoPage = () => {
   if (cryptoArr.length > 1) {
     return (
       <>
+        <h2 className="crypto-h2">Crypto Prices in USD</h2>
         <section>
           <img src={CryptoImage} alt="" />
         </section>
