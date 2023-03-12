@@ -16,16 +16,14 @@ const Header = () => {
     <header>
       <nav>
         <ul>
-          <li>
-            <button type="button" onClick={handleResetCryptoInfo}>
-              -
-              <ChevronLeftIcon />
-            </button>
-
-          </li>
-          <li><p>Prices</p></li>
-          <li><MicIcon /></li>
-          <li><SettingsIcon /></li>
+          <button type="button" onClick={handleResetCryptoInfo}>
+            <ChevronLeftIcon />
+          </button>
+          <li><p>Cryptocurrency Prices</p></li>
+          <div className="right-nav">
+            <li><MicIcon /></li>
+            <li><SettingsIcon /></li>
+          </div>
         </ul>
       </nav>
     </header>

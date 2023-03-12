@@ -1,40 +1,82 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { getCryptoPrices } from '../redux/crypto/cryptoSlice';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import '../assets/cryptoInfo.css';
 
-const CryptoPage = () => {
-  const dispatch = useDispatch();
+const CryptoInfo = () => {
   const cryptoArr = useSelector((state) => state.crypto.cryptoArr);
-  const loading = useSelector((state) => state.crypto.loading);
-
-  useEffect(() => {
-    if (cryptoArr.length === 0) {
-      dispatch(getCryptoPrices());
-    }
-  }, [dispatch, cryptoArr]);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
   return (
     <div>
       {cryptoArr ? (
-        <div className="crypto-container">
+        <div className="crypto-container-single">
           {cryptoArr.map((crypto) => (
-            <div key={crypto.id} className="single-crypto" id={crypto.id}>
-              <img src={crypto.image} alt="coinImage" />
-              <p key={crypto.id}>
-                {crypto.name}
-                : $
-                {crypto.current_price}
-              </p>
-              <p>
+            <ul type="button" key={crypto.id} className="single-crypto-info" id={crypto.id}>
+              <li><img src={crypto.image} alt="coinImage" /></li>
+              <li>
+                <h2>
+                  {crypto.name}
+                </h2>
+              </li>
+              <li className="crypto-info-text">
+                <p>
+                  Trading Symbol:
+                </p>
+                <p>
+                  (
+                  {crypto.symbol}
+                  )
+                </p>
+              </li>
+
+              <li className="crypto-info-text">
                 {' '}
-                Today High
-                {crypto.high_24h}
-              </p>
-            </div>
+                <p>Price:</p>
+                <p>
+                  $
+                  {crypto.current_price}
+                </p>
+              </li>
+              <li className="crypto-info-text">
+                <p>High 24H:</p>
+                <p>
+                  $
+                  {crypto.high_24h}
+                </p>
+              </li>
+              <li className="crypto-info-text">
+                <p>Low 24H:</p>
+                <p>
+                  $
+                  {crypto.low_24h}
+                </p>
+              </li>
+              <li className="crypto-info-text">
+                <p>Market Cap:</p>
+                <p>
+                  $
+                  {crypto.market_cap}
+                </p>
+              </li>
+              <li className="crypto-info-text">
+                <p>Price Change in 24H:</p>
+                <p>
+                  $
+                  {crypto.price_change_24h}
+                </p>
+              </li>
+              <li className="crypto-info-text">
+                <p>Circulating Supply:</p>
+                <p>
+                  {crypto.circulating_supply}
+                </p>
+              </li>
+              <li className="crypto-info-text">
+                <p>Total Supply:</p>
+                <p>
+                  {crypto.total_supply}
+                </p>
+              </li>
+            </ul>
           ))}
         </div>
       ) : (
@@ -43,5 +85,4 @@ const CryptoPage = () => {
     </div>
   );
 };
-
-export default CryptoPage;
+export default CryptoInfo;
