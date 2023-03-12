@@ -1,4 +1,18 @@
+:root {
+  --backgroundCorlor: #4269b2;
+  --firstBlue: #4469b0;
+  --secondBlue: #3f62a6;
+}
+
+body {
+  background-color: var(--backgroundCorlor);
+  color: white;
+}
+
 .App {
+  font-family:
+    'Lato',
+    sans-serif;
   text-align: center;
 }
 
@@ -31,50 +45,83 @@
 .crypto-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
   align-items: center;
   justify-items: center;
   justify-content: center;
 }
 
+ul > button {
+  width: 25vw;
+  background-color: #fff0;
+  border: none;
+  text-align: left;
+}
+
+button:nth-child(4n-3),
+button:nth-child(4n) {
+  background: var(--firstBlue);
+}
+
+button:nth-child(4n-2),
+button:nth-child(4n-1) {
+  background: var(--secondBlue);
+}
+
+ul > button:active {
+  color: red;
+}
+
 .single-crypto {
+  color: white;
   display: flex;
-  border: 2px solid red;
+  border: none;
   flex-direction: column;
   align-items: center;
-  width: 40vw;
-  padding: 10px;
+  width: 50vw;
   cursor: pointer;
 }
 
 img {
   width: 30vw;
 }
-p{
+
+p {
   text-align: center;
 }
-ul{
+
+ul {
   list-style: none;
 }
-.right-nav{
-      width: 25vw;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-}
-ul> button{
+
+.right-nav {
   width: 25vw;
-  background-color: #ffffff00;
-  border: none;
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
-ul> button:active{
-  color: red;
-}
-section > img{
+
+section > img {
   width: 100vw;
+}
+
+.crypto-info-text {
+  font-size: 1.3rem;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.crypto-info-text:nth-child(odd) {
+  background-color: var(--firstBlue);
+}
+
+.crypto-info-text:nth-child(even) {
+  background-color: var(--secondBlue);
+}
+
+ul > li > p {
+  font-size: 1.5rem;
+  padding: 0;
 }

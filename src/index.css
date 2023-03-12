@@ -25,7 +25,10 @@ code {
     'Courier New',
     monospace;
 }
-nav > ul{
+
+nav > ul {
+  height: 4rem;
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
