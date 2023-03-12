@@ -17,7 +17,7 @@ width: 90vw;
 li{
     padding: 5px;
         display: flex;
-        width: 100vw;
+        width: 50vw;
         align-items: center;
         flex-direction: row;
         justify-content: center;

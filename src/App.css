@@ -58,3 +58,23 @@ p{
 ul{
   list-style: none;
 }
+.right-nav{
+      width: 25vw;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+}
+ul> button{
+  width: 25vw;
+  background-color: #ffffff00;
+  border: none;
+  text-align: left;
+}
+ul> button:active{
+  color: red;
+}
+section > img{
+  width: 100vw;
+}
