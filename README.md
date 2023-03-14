@@ -15,12 +15,12 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Space Travelers's Hub ](#about-project)
+- [📖 Crypto Price ](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Space Travelers's Hub ](#about-project)
+  - [💻 Crypto Price ](#about-project)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -37,7 +37,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-## 📖 Space Travelers's Hub <a name="about-project"></a>
+## 📖 Crypto Price <a name="about-project"></a>
 
 > Crypto Prices is a React.js and Redux web application that displays real-time market prices of cryptocurrencies fetched from the Coin Gecko API. Features include price history, currency conversion, and a user-friendly interface
 
@@ -92,11 +92,11 @@
 
 <!-- LIVE DEMO -->
 
-## 💻 Space Travelers's Hub <a name="vgs-presentation"></a>
+## 💻 Crypto Price <a name="vgs-presentation"></a>
 
-> Here you can see our presentation :
+> Here you can see my presentation :
 
-- [NA]()
+- [Click Here](https://www.loom.com/share/d29a0b3f4c214c37a68ad9f69ea99fea)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
