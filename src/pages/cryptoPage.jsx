@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { getCryptoPrices, coinInfo } from '../redux/crypto/cryptoSlice';
 import CryptoInfo from './cryptoInfo';
 import CryptoImage from '../assets/CRYPTOunsplash.webp';
@@ -14,6 +15,7 @@ const CryptoPage = () => {
       dispatch(getCryptoPrices());
     }
   }, [dispatch, cryptoArr]);
+
   const coinInfoHandel = (id) => {
     dispatch(coinInfo(id));
   };
@@ -32,25 +34,32 @@ const CryptoPage = () => {
           {cryptoArr ? (
             <div className="crypto-container">
               {cryptoArr.map((crypto) => (
-                <button type="button" onClick={() => coinInfoHandel(crypto.id)} key={crypto.id} className="single-crypto" id={crypto.id}>
-                  <img src={crypto.image} alt="coinImage" />
-                  <p key={crypto.id}>
-                    {crypto.name}
-                    <br />
-                    Price: $
-                    {crypto.current_price}
-                  </p>
-                </button>
+                <Link to={`${crypto.id}`} key={crypto.id}>
+                  <button
+                    type="button"
+                    onClick={() => coinInfoHandel(crypto.id)}
+                    className="single-crypto"
+                    id={crypto.id}
+                  >
+                    <img src={crypto.image} alt="coinImage" />
+                    <p key={crypto.id}>
+                      {crypto.name}
+                      <br />
+                      Price: $
+                      {crypto.current_price}
+                    </p>
+                  </button>
+                </Link>
               ))}
             </div>
           ) : (
             <div>Loading data...</div>
           )}
         </div>
-
       </>
     );
-  } return (<CryptoInfo />);
+  }
+  return <CryptoInfo />;
 };
 
 export default CryptoPage;
