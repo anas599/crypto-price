@@ -1,0 +1,136 @@
+:root {
+  --backgroundCorlor: #4269b2;
+  --firstBlue: #4469b0;
+  --secondBlue: #3f62a6;
+}
+
+body {
+  background-color: var(--backgroundCorlor);
+  color: white;
+}
+
+.App {
+  font-family:
+    'Lato',
+    sans-serif;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.crypto-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+ul > button {
+  width: 25vw;
+  background-color: #fff0;
+  border: none;
+  text-align: left;
+  color: white;
+}
+
+button:nth-child(4n-3),
+button:nth-child(4n) {
+  background: var(--firstBlue);
+}
+
+button:nth-child(4n-2),
+button:nth-child(4n-1) {
+  background: var(--secondBlue);
+}
+
+ul > button:active {
+  color: red;
+}
+
+.single-crypto {
+  color: white;
+  display: flex;
+  border: none;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  cursor: pointer;
+}
+
+img {
+  width: 30vw;
+}
+
+p {
+  text-align: center;
+  text-shadow: 1px 1px 2px #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.right-nav {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+section > img {
+  width: 100vw;
+}
+
+.crypto-info-text {
+  font-size: 1.3rem;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.crypto-info-text:nth-child(odd) {
+  background-color: var(--firstBlue);
+}
+
+.crypto-info-text:nth-child(even) {
+  background-color: var(--secondBlue);
+}
+
+ul > li > p {
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.crypto-h2 {
+  background: cornflowerblue;
+  margin: 0;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
