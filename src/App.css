@@ -147,10 +147,13 @@ ul > li > p {
   text-decoration: none;
 }
 
-.search {
-  display: block;
-}
-
 .coin-clicked .search {
   display: none;
+}
+
+input[type="text" i] {
+  width: 80vw;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
 }
