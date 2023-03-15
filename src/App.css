@@ -57,6 +57,13 @@ ul > button {
   text-align: left;
   color: white;
 }
+.singleCRbtn {
+  width: 25vw;
+  background-color: #fff0;
+  border: none;
+  text-align: left;
+  color: white;
+}
 
 button:nth-child(4n-3),
 button:nth-child(4n) {
@@ -68,8 +75,8 @@ button:nth-child(4n-1) {
   background: var(--secondBlue);
 }
 
-ul > button:active {
-  color: red;
+.singleCRbtn:active {
+  color: #F6931A;
 }
 
 .single-crypto {
@@ -133,4 +140,7 @@ ul > li > p {
   margin: 0;
   font-size: 20px;
   text-shadow: 1px 1px 2px #000;
+}
+.asd{
+  text-decoration: none;
 }

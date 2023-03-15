@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { getCryptoPrices, coinInfo } from '../redux/crypto/cryptoSlice';
 import CryptoInfo from './cryptoInfo';
 import CryptoImage from '../assets/CRYPTOunsplash.webp';
@@ -34,7 +34,7 @@ const CryptoPage = () => {
           {cryptoArr ? (
             <div className="crypto-container">
               {cryptoArr.map((crypto) => (
-                <Link to={`${crypto.id}`} key={crypto.id}>
+                <Link to={`${crypto.name}`} key={crypto.id} className="asd">
                   <button
                     type="button"
                     onClick={() => coinInfoHandel(crypto.id)}
@@ -56,6 +56,11 @@ const CryptoPage = () => {
             <div>Loading data...</div>
           )}
         </div>
+        <Routes>
+          {cryptoArr.map((crypto) => (
+            <Route key={crypto.id} path={`/${crypto.name}`} element={<CryptoInfo />} />
+          ))}
+        </Routes>
       </>
     );
   }
