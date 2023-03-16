@@ -158,3 +158,21 @@ input[type="text" i] {
   text-align: center;
   font-size: 1rem;
 }
+
+@media only screen and (min-width: 900px) {
+  .crypto-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .single-crypto {
+    width: 6rem;
+  }
+
+  img {
+    width: 6rem;
+  }
+}
