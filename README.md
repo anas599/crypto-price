@@ -86,7 +86,7 @@
 
 > Here you can visit my live demo :
 
-- [Crypto Prices](https://crypto-prices-reactjs.netlify.app/)
+- [Click Here](https://crypto-prices-reactjs.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
