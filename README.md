@@ -146,7 +146,7 @@ To run tests, run the following command:
   npm run test
 ```
 
-To run the stylehint linter
+To run the stylehint linters
 
 ```sh
   npx stylehint "**/*.{css,scss}"
@@ -206,7 +206,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project star it!
+If you like this project please star it!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
